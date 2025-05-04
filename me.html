@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人介绍</title>
+    <style>
+        :root {
+            --primary: #2d3436;
+            --secondary: #636e72;
+            --accent: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: #f9f9f9;
+            color: var(--primary);
+            line-height: 1.6;
+        }
+  /* 导航栏样式 */
+  nav {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+  }
+  
+  nav a:hover {
+      color: #1db954;
+  }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .intro-text {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--secondary);
+            font-size: 1.1em;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 1.6em;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background: #f2f2f2;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px);
+        }
+
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .education-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .awards-list {
+            columns: 2;
+            list-style: none;
+        }
+
+        .awards-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .awards-list li::before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            .awards-list {
+                columns: 1;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            .avatar {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <nav>
+        <a href="start!.html">首页</a> 
+        <a href="music.html">音乐</a>
+        <a href="dog.html">宠物</a>
+        <a href="study.html">学习</a>
+        <a href="me.html">我的</a>
+    </nav>
+    <div class="container">
+        <header>
+            <img src="img/me1.jpg" alt="个人头像" class="avatar">
+            <h1>JIQINLI</h1>
+            <p class="intro-text">
+                杭州市中策职业学校钱塘学校学生<br>
+                大数据技术应用专业<br>
+                专注学习大数据方面知识
+            </p>
+        </header>
+
+    
+        <div class="section">
+            <h2>教育背景</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <h3> 杭州市中策职业学校钱塘学校-在读学生</h3>
+                    <p>2022-2025</p>
+                    <ul>
+                        <li>图形设计与应用</li>
+                        <li>影视剪辑与后期</li>
+                        <li>数据分析与处理</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- 专业技能 -->
+        <div class="section">
+            <h2>专业技能</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Photoshop</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Premiere Pro</span>
+                <span class="skill-tag">python</span>
+                <span class="skill-tag">javascript</span>
+                <span class="skill-tag">pandas</span>
+                <span class="skill-tag">numpy</span>
+                <span class="skill-tag">cisco</span>
+            </div>
+        </div>
+
+
+        <!-- 个人简介 -->
+        <div class="section">
+            <h2>关于我</h2>
+            <div style="line-height: 1.8; max-width: 700px;">
+                <p>来自22区域大数据技术运用，是一位正在学习的学生。</p>
+                
+                <p style="margin: 20px 0;">
+                <strong>核心能力：</strong><br>
+                - 沟通能力强高效沟通<br>
+                - 热爱学习新鲜事务<br>
+                - 参与众多志愿服务<br>
+                - 数字媒体能力较优
+                </p>
+
+                <p>保持对新兴技术的好奇心，目前正在探索大数据技术应用相关事务。热爱摄影、阅读与旅行，认为好的学习方式要劳逸结合。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

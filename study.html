@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background-color: #ffffff;
+        }
+ /* 导航栏样式 */
+ nav {
+     display: flex;
+     justify-content: flex-end;
+     padding: 20px;
+     background-color: #fff;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ nav a {
+     margin-left: 25px;
+     text-decoration: none;
+     color: #555;
+     font-weight: 500;
+     font-size: 16px;
+     transition: color 0.3s;
+ }
+ 
+ nav a:hover {
+     color: #1db954;
+ }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .course-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 120px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.42, 0, 0.58, 1);
+        }
+
+        .course-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .course-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .course-image {
+            flex: 1;
+            margin: 0 60px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .course-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .course-content {
+            flex: 1;
+            padding: 0 40px;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: -0.03em;
+        }
+
+        .course-description {
+            font-size: 20px;
+            color: #86868b;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 60px 20px;
+            }
+
+            .course-section {
+                flex-direction: column;
+                margin-bottom: 80px;
+            }
+
+            .course-section:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .course-image {
+                margin: 0 0 40px 0;
+                width: 100%;
+            }
+
+            .course-content {
+                padding: 0;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .course-description {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+   <nav>
+        <a href="start!.html">首页</a>
+        <a href="music.html">音乐</a>
+        <a href="dog.html">宠物</a>
+        <a href="study.html">学习</a>
+        <a href="me.html">我的</a>
+    </nav>
+    
+    <div class="container">
+        <!-- Java -->
+        <section class="course-section">
+            <div class="course-image">
+                <img src="img/Java.png" alt="Java开发">
+            </div>
+            <div class="course-content">
+                <h2>Java </h2>
+                <p class="course-description">
+                    掌握Java SE核心编程与Spring生态体系，涵盖Spring Boot、Spring Cloud微服务架构，
+                    熟悉JVM原理与性能优化，能够构建高可用分布式系统，实现企业级应用开发与部署。
+                </p>
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+        <section class="course-section">
+            <div class="course-image">
+                <img src="img/javascript.png" alt="JavaScript开发">
+            </div>
+            <div class="course-content">
+                <h2>JavaScript </h2>
+                <p class="course-description">
+                    精通现代JavaScript(ES6+)开发，掌握React/Vue前端框架与Node.js后端开发，
+                    熟悉TypeScript与Webpack构建工具，具备全栈应用开发和性能优化能力。
+                </p>
+            </div>
+        </section>
+
+        <!-- 数据分析 -->
+        <section class="course-section">
+            <div class="course-image">
+                <img src="img/sjfx.png" alt="数据分析">
+            </div>
+            <div class="course-content">
+                <h2>数据分析</h2>
+                <p class="course-description">
+                    熟练使用Python进行数据清洗、分析与可视化，掌握SQL数据库操作与Tableau BI工具，
+                    能够运用机器学习算法构建预测模型，提供数据驱动的商业决策支持。
+                </p>
+            </div>
+        </section>
+
+        <!-- Python -->
+        <section class="course-section">
+            <div class="course-image">
+                <img src="img/python.png" alt="Python开发">
+            </div>
+            <div class="course-content">
+                <h2>Python 编程</h2>
+                <p class="course-description">
+                    深入掌握Python语言特性与设计模式，熟悉Django/Flask Web开发框架，
+                    了解网络爬虫开发与自动化测试，能够进行科学计算与人工智能算法实现。
+                </p>
+            </div>
+        </section>
+
+        <!-- Photoshop -->
+        <section class="course-section">
+            <div class="course-image">
+                <img src="img/ps.png" alt="Photoshop设计">
+            </div>
+            <div class="course-content">
+                <h2>Photoshop 视觉设计</h2>
+                <p class="course-description">
+                    精通图层管理、选区技巧与高级调色，掌握商业海报、UI界面与产品精修技术，
+                    能够完成从概念设计到成品输出的完整平面设计工作流程。
+                </p>
+            </div>
+        </section>
+
+        <!-- Premiere Pro -->
+        <section class="course-section">
+            <div class="course-image">
+                <img src="img/pr.png" alt="视频剪辑">
+            </div>
+            <div class="course-content">
+                <h2>Premiere Pro 影视制作</h2>
+                <p class="course-description">
+                    掌握多轨道剪辑、动态转场与音频处理技术，熟悉调色板与特效应用，
+                    能够独立完成从素材整理、粗剪到成品输出的专业级视频制作流程。
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.course-section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

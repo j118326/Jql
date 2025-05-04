@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宠物</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.5;
+        }
+		/* 导航栏样式 */
+		nav {
+		    display: flex;
+		    justify-content: flex-end;
+		    padding: 20px;
+		    background-color: #fff;
+		    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		nav a {
+		    margin-left: 25px;
+		    text-decoration: none;
+		    color: #555;
+		    font-weight: 500;
+		    font-size: 16px;
+		    transition: color 0.3s;
+		}
+		
+		nav a:hover {
+		    color: #1db954;
+		}
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+		
+        
+        .subtitle {
+            font-size: 24px;
+            color: #86868b;
+            font-weight: 400;
+        }
+        
+        .dog-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 100px;
+            min-height: 600px;
+        }
+        
+        .dog-image {
+            flex: 1;
+           padding-right: 40px;
+        }
+        
+        .dog-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dog-info {
+            flex: 1;
+            padding-left: 40px;
+        }
+        
+        .dog-name {
+            font-size: 32px;
+            font-weight: 600; /* 保持原有加粗效果 */
+            margin-bottom: 20px;
+            color: #1d1d1f;
+        }
+        
+        /* 新增链接样式 */
+        .dog-name a {
+            color: inherit;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .dog-name a:hover {
+            color: #0071e3;
+        }
+        
+        .dog-name a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0071e3;
+            transition: width 0.3s ease;
+        }
+        
+        .dog-name a:hover::after {
+            width: 100%;
+        }
+        
+        .dog-description {
+            font-size: 18px;
+            color: #515154;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .dog-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+      
+        .stat-item h3 {
+            font-size: 14px;
+            color: #86868b;
+            font-weight: 500;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-item p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #1d1d1f;
+        }
+        
+        @media (max-width: 768px) {
+            .dog-section {
+                flex-direction: column;
+                margin-bottom: 60px;
+            }
+            
+            .dog-image, .dog-info {
+                padding: 0;
+                width: 100%;
+            }
+            
+            .dog-image {
+                margin-bottom: 30px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+            }
+        }
+		
+    </style>
+</head>
+<body>
+	<nav>
+	    <a href="start!.html">首页</a>
+	    <a href="music.html">音乐</a>
+	    <a href="dog.html">宠物</a>
+	    <a href="study.html">学习</a>
+	    <a href="me.html">我的</a>
+	</nav>
+    <div class="container">
+        <header>
+            <h1>精选犬类</h1>
+            <p class="subtitle">五种各具特色的优秀犬种介绍</p>
+        </header>
+        
+        <!-- 更新后的拉布拉多犬部分 -->
+        <section class="dog-section">
+            <div class="dog-image">
+                <img src="img/lbld.jpg" alt="拉布拉多犬">
+            </div>
+            <div class="dog-info">
+                <h2 class="dog-name">
+                    <a href="cream.html" class="nynyny">拉布拉多犬-点一下</a>
+                </h2>
+                <p class="dog-description">
+                    拉布拉多犬是一种中大型犬类，性格温顺、活泼开朗，对人友善。它们非常聪明，容易训练，是最受欢迎的家庭犬之一。拉布拉多也是优秀的工作犬，常被训练为导盲犬、搜救犬等。
+                </p>
+                <div class="dog-stats">
+                    <div class="stat-item">
+                        <h3>体型</h3>
+                        <p>中大型</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>寿命</h3>
+                        <p>10-14年</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>性格</h3>
+                        <p>友善、活泼、聪明</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>适合人群</h3>
+                        <p>家庭、儿童、老人</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+    </div>
+      
+        <!-- 金毛 -->
+        <section class="dog-section">
+            <div class="dog-image">
+                <img src="img/jm.jpg"" alt="金毛犬">
+            </div>
+            <div class="dog-info">
+                <h2 class="dog-name">金毛寻回犬</h2>
+                <p class="dog-description">
+                    金毛犬以其金色的被毛和温和的性格闻名。它们非常聪明、忠诚且富有耐心，是理想的家庭伴侣犬。金毛犬喜欢游泳和取回物品，需要充足的运动量。它们对儿童特别友好，是优秀的治疗犬。
+                </p>
+                <div class="dog-stats">
+                    <div class="stat-item">
+                        <h3>体型</h3>
+                        <p>大型</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>寿命</h3>
+                        <p>10-12年</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>性格</h3>
+                        <p>温和、忠诚、耐心</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>适合人群</h3>
+                        <p>活跃家庭、有儿童家庭</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 西高地 -->
+        <section class="dog-section">
+            <div class="dog-image">
+                <img src="img/xgd.jpg" alt="西高地白梗">
+            </div>
+            <div class="dog-info">
+                <h2 class="dog-name">西高地白梗</h2>
+                <p class="dog-description">
+                    西高地白梗是一种小型犬，以其纯白的被毛和活泼的性格著称。它们自信、勇敢且充满活力，是优秀的伴侣犬。西高地白梗适应性强，适合公寓生活，但需要定期梳理被毛以保持其标志性的外观。
+                </p>
+                <div class="dog-stats">
+                    <div class="stat-item">
+                        <h3>体型</h3>
+                        <p>小型</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>寿命</h3>
+                        <p>12-16年</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>性格</h3>
+                        <p>活泼、自信、勇敢</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>适合人群</h3>
+                        <p>单身人士、小家庭</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 斑点狗 -->
+        <section class="dog-section">
+            <div class="dog-image">
+                <img src="img/bdg.jpg" alt="斑点狗">
+            </div>
+            <div class="dog-info">
+                <h2 class="dog-name">大麦町犬(斑点狗)</h2>
+                <p class="dog-description">
+                    大麦町犬以其独特的黑白斑点被毛闻名，是优雅与力量的结合体。它们精力充沛、聪明且独立，需要大量的运动和训练。斑点狗曾作为马车护卫犬，具有出色的耐力和奔跑能力。它们对家庭成员忠诚，但可能对其他宠物有所保留。
+                </p>
+                <div class="dog-stats">
+                    <div class="stat-item">
+                        <h3>体型</h3>
+                        <p>中大型</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>寿命</h3>
+                        <p>11-13年</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>性格</h3>
+                        <p>精力充沛、聪明、独立</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>适合人群</h3>
+                        <p>活跃人士、有经验养犬者</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 土松 -->
+        <section class="dog-section">
+            <div class="dog-image">
+                <img src="img/ts.jpg" alt="中国土松犬">
+            </div>
+            <div class="dog-info">
+                <h2 class="dog-name">中国土松犬</h2>
+                <p class="dog-description">
+                    中国土松犬是我国本土的优秀犬种，历史悠久。它们体型中等，被毛蓬松，性格忠诚稳重。土松犬适应力强，既能看家护院，又能成为温顺的伴侣犬。它们对主人极为忠诚，但可能对陌生人保持警惕，需要从小进行社会化训练。
+                </p>
+                <div class="dog-stats">
+                    <div class="stat-item">
+                        <h3>体型</h3>
+                        <p>中型</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>寿命</h3>
+                        <p>12-15年</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>性格</h3>
+                        <p>忠诚、稳重、警惕</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>适合人群</h3>
+                        <p>家庭、农村/郊区居民</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
